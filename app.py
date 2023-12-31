@@ -15,6 +15,7 @@ from flask import (
 from werkzeug.utils import secure_filename
 from bson import ObjectId
 
+
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
@@ -25,6 +26,7 @@ TOKEN_KEY = os.environ.get("TOKEN_KEY")
 
 client = MongoClient(MONGODB_URI)
 db = client[DB_NAME]
+
 
 app = Flask(__name__)
 
